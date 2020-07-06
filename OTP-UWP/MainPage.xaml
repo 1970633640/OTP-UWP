@@ -10,8 +10,8 @@
 
     <StackPanel>
         <CommandBar Background="Transparent" DefaultLabelPosition="Right">
-            <AppBarButton Icon="Add" x:Uid="Add"/>
-            <AppBarButton Icon="Setting" x:Uid="Setting"/>
+            <AppBarButton Icon="Add" x:Uid="Add" Name="Add" Click="Add_Click"/>
+            <AppBarButton Icon="Setting" x:Uid="Setting" Name="setting" Click="setting_Click"/>
             <AppBarButton x:Uid="About">
                 <AppBarButton.Icon>
                     <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE9CE;"/>

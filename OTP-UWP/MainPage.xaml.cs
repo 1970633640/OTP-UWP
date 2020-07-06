@@ -16,15 +16,22 @@ namespace OTP_UWP
         public MainPage()
         {
             this.InitializeComponent();
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            var totp = new Totp(Base32Encoding.ToBytes("K5ME2SCOGI2EYQSIJJCTKNKHJ5GECN2UJQ2E6S2HIJFFSTJTINJQ===="), mode: OtpHashMode.Sha1);
 
-            //logos.Text = totp.ComputeTotp();
+        }
+
+        private void setting_Click(object sender, RoutedEventArgs e)
+        {
             
-            logos.Text += "   s:" + SteamCode.GenerateCode("SRX5CBQJH2OV2LY4RGAE65XMM7NGACJW");
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Add));
         }
     }
 }

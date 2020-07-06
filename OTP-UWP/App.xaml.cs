@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OTP_UWP.Functions;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace OTP_UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            SqlAccess.Init_Database();
         }
 
         /// <summary>

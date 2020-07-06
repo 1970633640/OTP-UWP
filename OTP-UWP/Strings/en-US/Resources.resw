@@ -123,7 +123,49 @@
   <data name="Add.Label" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="Add_Steam.Label" xml:space="preserve">
+    <value>Add a Steam Authenticator</value>
+  </data>
+  <data name="Add_Steam2.Text" xml:space="preserve">
+    <value>Add a Steam Authenticator</value>
+  </data>
+  <data name="advanced_setting.Text" xml:space="preserve">
+    <value>Advanced Settings</value>
+  </data>
+  <data name="Cancel.Label" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="common_setting.Text" xml:space="preserve">
+    <value>Common Settings</value>
+  </data>
+  <data name="Done.Label" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="otp_algorithm.Text" xml:space="preserve">
+    <value>Algorithm</value>
+  </data>
+  <data name="otp_digits.Text" xml:space="preserve">
+    <value>Digits</value>
+  </data>
+  <data name="otp_issuer.Text" xml:space="preserve">
+    <value>Issuer (Optional)</value>
+  </data>
+  <data name="otp_label.Text" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="otp_period.Text" xml:space="preserve">
+    <value>Period (s)</value>
+  </data>
+  <data name="otp_secret.Text" xml:space="preserve">
+    <value>Secret</value>
+  </data>
+  <data name="otp_type.Text" xml:space="preserve">
+    <value>OTP Type</value>
+  </data>
   <data name="Setting.Label" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="steam_secret.Text" xml:space="preserve">
+    <value>Steam Secret (Base32 Encoded)</value>
   </data>
 </root>
