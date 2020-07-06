@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{FCFA1100-477B-4003-A640-314C1B8C43AD}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OTP_UWP</RootNamespace>
+    <AssemblyName>OTP-UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\SteamCode.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Logos\1and1.svg" />
+    <Content Include="Assets\Logos\1password.svg" />
+    <Content Include="Assets\Logos\adafruit.svg" />
+    <Content Include="Assets\Logos\adguard.svg" />
+    <Content Include="Assets\Logos\adobe.svg" />
+    <Content Include="Assets\Logos\airbnb.svg" />
+    <Content Include="Assets\Logos\airbrake.svg" />
+    <Content Include="Assets\Logos\airtable.svg" />
+    <Content Include="Assets\Logos\allegropl.svg" />
+    <Content Include="Assets\Logos\amazon.svg" />
+    <Content Include="Assets\Logos\amazonwebservices.svg" />
+    <Content Include="Assets\Logos\angellist.svg" />
+    <Content Include="Assets\Logos\animebytes.svg" />
+    <Content Include="Assets\Logos\anonaddy.svg" />
+    <Content Include="Assets\Logos\apache.svg" />
+    <Content Include="Assets\Logos\apple.svg" />
+    <Content Include="Assets\Logos\appveyor.svg" />
+    <Content Include="Assets\Logos\arenanet.svg" />
+    <Content Include="Assets\Logos\atlantic_net.svg" />
+    <Content Include="Assets\Logos\atlassian.svg" />
+    <Content Include="Assets\Logos\avm.svg" />
+    <Content Include="Assets\Logos\backblaze.svg" />
+    <Content Include="Assets\Logos\battlenet.svg" />
+    <Content Include="Assets\Logos\betterment.svg" />
+    <Content Include="Assets\Logos\binance.svg" />
+    <Content Include="Assets\Logos\bitbucket.svg" />
+    <Content Include="Assets\Logos\bitcoin.svg" />
+    <Content Include="Assets\Logos\bitdefender.svg" />
+    <Content Include="Assets\Logos\bitfinex.svg" />
+    <Content Include="Assets\Logos\bitmex.svg" />
+    <Content Include="Assets\Logos\bitpanda.svg" />
+    <Content Include="Assets\Logos\bitstamp.svg" />
+    <Content Include="Assets\Logos\bittrex.svg" />
+    <Content Include="Assets\Logos\bitwala.svg" />
+    <Content Include="Assets\Logos\bitwarden.svg" />
+    <Content Include="Assets\Logos\blockchain_info.svg" />
+    <Content Include="Assets\Logos\bugcrowd.svg" />
+    <Content Include="Assets\Logos\cexio.svg" />
+    <Content Include="Assets\Logos\church_tools.svg" />
+    <Content Include="Assets\Logos\cisco.svg" />
+    <Content Include="Assets\Logos\cloudflare.svg" />
+    <Content Include="Assets\Logos\cloud_download.svg" />
+    <Content Include="Assets\Logos\cobranded.svg" />
+    <Content Include="Assets\Logos\codegiant.svg" />
+    <Content Include="Assets\Logos\coinbase.svg" />
+    <Content Include="Assets\Logos\coinjar.svg" />
+    <Content Include="Assets\Logos\computerbase.svg" />
+    <Content Include="Assets\Logos\connectwise_manage.svg" />
+    <Content Include="Assets\Logos\cozycloud.svg" />
+    <Content Include="Assets\Logos\crowdin.svg" />
+    <Content Include="Assets\Logos\dashlane.svg" />
+    <Content Include="Assets\Logos\debian.svg" />
+    <Content Include="Assets\Logos\degiro.svg" />
+    <Content Include="Assets\Logos\denic.svg" />
+    <Content Include="Assets\Logos\diaspora.svg" />
+    <Content Include="Assets\Logos\digidentity.svg" />
+    <Content Include="Assets\Logos\digital_ocean.svg" />
+    <Content Include="Assets\Logos\discord.svg" />
+    <Content Include="Assets\Logos\discourse.svg" />
+    <Content Include="Assets\Logos\disroot.svg" />
+    <Content Include="Assets\Logos\docker.svg" />
+    <Content Include="Assets\Logos\docusign.svg" />
+    <Content Include="Assets\Logos\dreamhost.svg" />
+    <Content Include="Assets\Logos\dropbox.svg" />
+    <Content Include="Assets\Logos\drupal.svg" />
+    <Content Include="Assets\Logos\electronic_arts.svg" />
+    <Content Include="Assets\Logos\email.svg" />
+    <Content Include="Assets\Logos\epic_games.svg" />
+    <Content Include="Assets\Logos\etsy.svg" />
+    <Content Include="Assets\Logos\eveonline.svg" />
+    <Content Include="Assets\Logos\evernote.svg" />
+    <Content Include="Assets\Logos\facebook.svg" />
+    <Content Include="Assets\Logos\faceit.svg" />
+    <Content Include="Assets\Logos\fanatical.svg" />
+    <Content Include="Assets\Logos\fastmail.svg" />
+    <Content Include="Assets\Logos\figma.svg" />
+    <Content Include="Assets\Logos\fingerprint.svg" />
+    <Content Include="Assets\Logos\finnair.svg" />
+    <Content Include="Assets\Logos\firefox.svg" />
+    <Content Include="Assets\Logos\flight_takeoff.svg" />
+    <Content Include="Assets\Logos\floatplane.svg" />
+    <Content Include="Assets\Logos\friendica.svg" />
+    <Content Include="Assets\Logos\fritz.svg" />
+    <Content Include="Assets\Logos\gamepad.svg" />
+    <Content Include="Assets\Logos\gandi.svg" />
+    <Content Include="Assets\Logos\git.svg" />
+    <Content Include="Assets\Logos\gitea.svg" />
+    <Content Include="Assets\Logos\github.svg" />
+    <Content Include="Assets\Logos\gitlab.svg" />
+    <Content Include="Assets\Logos\gmx.svg" />
+    <Content Include="Assets\Logos\godaddy.svg" />
+    <Content Include="Assets\Logos\gogs.svg" />
+    <Content Include="Assets\Logos\google.svg" />
+    <Content Include="Assets\Logos\govuk.svg" />
+    <Content Include="Assets\Logos\greenhost.svg" />
+    <Content Include="Assets\Logos\hackerone.svg" />
+    <Content Include="Assets\Logos\heroku.svg" />
+    <Content Include="Assets\Logos\hetzner.svg" />
+    <Content Include="Assets\Logos\hitbtc.svg" />
+    <Content Include="Assets\Logos\hmrc.svg" />
+    <Content Include="Assets\Logos\home_assistant.svg" />
+    <Content Include="Assets\Logos\hover.svg" />
+    <Content Include="Assets\Logos\humblebundle.svg" />
+    <Content Include="Assets\Logos\hurricane_electric.svg" />
+    <Content Include="Assets\Logos\ibm.svg" />
+    <Content Include="Assets\Logos\iconomi.svg" />
+    <Content Include="Assets\Logos\ifttt.svg" />
+    <Content Include="Assets\Logos\instagram.svg" />
+    <Content Include="Assets\Logos\inwx.svg" />
+    <Content Include="Assets\Logos\itchio.svg" />
+    <Content Include="Assets\Logos\jagex.svg" />
+    <Content Include="Assets\Logos\jetbrains.svg" />
+    <Content Include="Assets\Logos\joomla.svg" />
+    <Content Include="Assets\Logos\keeper.svg" />
+    <Content Include="Assets\Logos\kickstarter.svg" />
+    <Content Include="Assets\Logos\kraken.svg" />
+    <Content Include="Assets\Logos\kucoin.svg" />
+    <Content Include="Assets\Logos\lastpass.svg" />
+    <Content Include="Assets\Logos\librenms.svg" />
+    <Content Include="Assets\Logos\lichess.svg" />
+    <Content Include="Assets\Logos\linkedin.svg" />
+    <Content Include="Assets\Logos\linode.svg" />
+    <Content Include="Assets\Logos\liqui.svg" />
+    <Content Include="Assets\Logos\livelyme.svg" />
+    <Content Include="Assets\Logos\lobsters.svg" />
+    <Content Include="Assets\Logos\localbitcoins.svg" />
+    <Content Include="Assets\Logos\localmonero.svg" />
+    <Content Include="Assets\Logos\login_gov.svg" />
+    <Content Include="Assets\Logos\logmein.svg" />
+    <Content Include="Assets\Logos\mailbox.svg" />
+    <Content Include="Assets\Logos\mailchimp.svg" />
+    <Content Include="Assets\Logos\mailcow.svg" />
+    <Content Include="Assets\Logos\mailgun.svg" />
+    <Content Include="Assets\Logos\mailru.svg" />
+    <Content Include="Assets\Logos\mapbox.svg" />
+    <Content Include="Assets\Logos\mastodon.svg" />
+    <Content Include="Assets\Logos\matomo.svg" />
+    <Content Include="Assets\Logos\mega.svg" />
+    <Content Include="Assets\Logos\microsoft.svg" />
+    <Content Include="Assets\Logos\microsoft_teams.svg" />
+    <Content Include="Assets\Logos\migadu.svg" />
+    <Content Include="Assets\Logos\mint.svg" />
+    <Content Include="Assets\Logos\miraheze.svg" />
+    <Content Include="Assets\Logos\mixer.svg" />
+    <Content Include="Assets\Logos\mongodb.svg" />
+    <Content Include="Assets\Logos\mvpsnet.svg" />
+    <Content Include="Assets\Logos\namecheap.svg" />
+    <Content Include="Assets\Logos\namecom.svg" />
+    <Content Include="Assets\Logos\nas.svg" />
+    <Content Include="Assets\Logos\netcup.svg" />
+    <Content Include="Assets\Logos\nextcloud.svg" />
+    <Content Include="Assets\Logos\nintendo.svg" />
+    <Content Include="Assets\Logos\no_starch_press.svg" />
+    <Content Include="Assets\Logos\npm.svg" />
+    <Content Include="Assets\Logos\oculus.svg" />
+    <Content Include="Assets\Logos\office.svg" />
+    <Content Include="Assets\Logos\okta.svg" />
+    <Content Include="Assets\Logos\online.svg" />
+    <Content Include="Assets\Logos\openvz.svg" />
+    <Content Include="Assets\Logos\opnsense.svg" />
+    <Content Include="Assets\Logos\orcid.svg" />
+    <Content Include="Assets\Logos\origin.svg" />
+    <Content Include="Assets\Logos\ovh.svg" />
+    <Content Include="Assets\Logos\packet.svg" />
+    <Content Include="Assets\Logos\parsecgaming.svg" />
+    <Content Include="Assets\Logos\passwordstate.svg" />
+    <Content Include="Assets\Logos\patreon.svg" />
+    <Content Include="Assets\Logos\paypal.svg" />
+    <Content Include="Assets\Logos\paysafecard.svg" />
+    <Content Include="Assets\Logos\paywithprivacy.svg" />
+    <Content Include="Assets\Logos\pcloud.svg" />
+    <Content Include="Assets\Logos\phabricator.svg" />
+    <Content Include="Assets\Logos\phpmyadmin.svg" />
+    <Content Include="Assets\Logos\plurk.svg" />
+    <Content Include="Assets\Logos\posteo.svg" />
+    <Content Include="Assets\Logos\pretix.svg" />
+    <Content Include="Assets\Logos\prey.svg" />
+    <Content Include="Assets\Logos\private_internet_access.svg" />
+    <Content Include="Assets\Logos\protonmail.svg" />
+    <Content Include="Assets\Logos\proxmox.svg" />
+    <Content Include="Assets\Logos\pushover.svg" />
+    <Content Include="Assets\Logos\pypi.svg" />
+    <Content Include="Assets\Logos\python_anywhere.svg" />
+    <Content Include="Assets\Logos\rackspace.svg" />
+    <Content Include="Assets\Logos\reddit.svg" />
+    <Content Include="Assets\Logos\ripe_ncc.svg" />
+    <Content Include="Assets\Logos\robinhood.svg" />
+    <Content Include="Assets\Logos\rockstar.svg" />
+    <Content Include="Assets\Logos\rss.svg" />
+    <Content Include="Assets\Logos\sap.svg" />
+    <Content Include="Assets\Logos\scaleway.svg" />
+    <Content Include="Assets\Logos\school.svg" />
+    <Content Include="Assets\Logos\sciebo.svg" />
+    <Content Include="Assets\Logos\sentry.svg" />
+    <Content Include="Assets\Logos\sevdesk.svg" />
+    <Content Include="Assets\Logos\skrill.svg" />
+    <Content Include="Assets\Logos\slack.svg" />
+    <Content Include="Assets\Logos\snapchat.svg" />
+    <Content Include="Assets\Logos\sophos.svg" />
+    <Content Include="Assets\Logos\sourceforge.svg" />
+    <Content Include="Assets\Logos\squarespace.svg" />
+    <Content Include="Assets\Logos\standardnotes.svg" />
+    <Content Include="Assets\Logos\starcitizen.svg" />
+    <Content Include="Assets\Logos\steam.svg" />
+    <Content Include="Assets\Logos\stripe.svg" />
+    <Content Include="Assets\Logos\sync.svg" />
+    <Content Include="Assets\Logos\synology.svg" />
+    <Content Include="Assets\Logos\teahub.svg" />
+    <Content Include="Assets\Logos\teamviewer.svg" />
+    <Content Include="Assets\Logos\terminal.svg" />
+    <Content Include="Assets\Logos\transip.svg" />
+    <Content Include="Assets\Logos\trello.svg" />
+    <Content Include="Assets\Logos\tumblr.svg" />
+    <Content Include="Assets\Logos\turbotax.svg" />
+    <Content Include="Assets\Logos\tutanota.svg" />
+    <Content Include="Assets\Logos\tuwien_ac_at.svg" />
+    <Content Include="Assets\Logos\twilio.svg" />
+    <Content Include="Assets\Logos\twitch.svg" />
+    <Content Include="Assets\Logos\twitter.svg" />
+    <Content Include="Assets\Logos\uber.svg" />
+    <Content Include="Assets\Logos\ubisoft.svg" />
+    <Content Include="Assets\Logos\ubnt.svg" />
+    <Content Include="Assets\Logos\ubuntu_one.svg" />
+    <Content Include="Assets\Logos\uphold.svg" />
+    <Content Include="Assets\Logos\usaa.svg" />
+    <Content Include="Assets\Logos\vagrant_cloud.svg" />
+    <Content Include="Assets\Logos\vexxhost.svg" />
+    <Content Include="Assets\Logos\vk.svg" />
+    <Content Include="Assets\Logos\vultr.svg" />
+    <Content Include="Assets\Logos\wallabag.svg" />
+    <Content Include="Assets\Logos\wallet.svg" />
+    <Content Include="Assets\Logos\wargaming.svg" />
+    <Content Include="Assets\Logos\wasabi.svg" />
+    <Content Include="Assets\Logos\web_de.svg" />
+    <Content Include="Assets\Logos\weclapp.svg" />
+    <Content Include="Assets\Logos\wikimedia.svg" />
+    <Content Include="Assets\Logos\wordpress.svg" />
+    <Content Include="Assets\Logos\workplace.svg" />
+    <Content Include="Assets\Logos\xero.svg" />
+    <Content Include="Assets\Logos\xerox.svg" />
+    <Content Include="Assets\Logos\xing.svg" />
+    <Content Include="Assets\Logos\yandex_money.svg" />
+    <Content Include="Assets\Logos\zapier.svg" />
+    <Content Include="Assets\Logos\zendesk.svg" />
+    <Content Include="Assets\Logos\zoho.svg" />
+    <Content Include="Assets\Logos\zoom.svg" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="Otp.NET">
+      <Version>1.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-sqlcipher">
+      <Version>1.7.335</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
