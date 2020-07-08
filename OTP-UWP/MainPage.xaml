@@ -4,10 +4,30 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:OTP_UWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:dataclass="using:OTP_UWP.DataClass"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Page.Resources>
+        <DataTemplate x:Key="OtpTemplate" x:DataType="dataclass:ObserverbleOtp">
+            <Grid Width="600" Height="120">
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="60"/>
+                    <RowDefinition  Height="50"/>
+                    <RowDefinition  Height="10"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="{x:Bind logo}" Height="64" Width="64" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Bind issuer}" Margin="8,16,8,4" VerticalAlignment="Center" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{x:Bind name}" Margin="8,4,8,16" VerticalAlignment="Center" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                <TextBlock Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Text="{x:Bind Code,Mode=OneWay}" Margin="8,0,8,8" VerticalAlignment="Center" TextAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}"/>
+                <ProgressBar Height="10" Value="{x:Bind Remain,Mode=OneWay}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
     <StackPanel>
         <CommandBar Background="Transparent" DefaultLabelPosition="Right">
             <AppBarButton Icon="Add" x:Uid="Add" Name="Add" Click="Add_Click"/>
@@ -17,9 +37,20 @@
                     <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE9CE;"/>
                 </AppBarButton.Icon>
             </AppBarButton>
-            
+
         </CommandBar>
-        <Button Content="generate" Click="Button_Click"/>
-        <TextBlock x:Name="logos"/>
+        <TextBlock x:Name="logos" Text=""/>
+        <GridView ItemsSource="{x:Bind otpItems}" ItemTemplate="{StaticResource OtpTemplate}"  Name="OtpGrid" IsItemClickEnabled="True" SelectionMode="None" HorizontalAlignment="Stretch">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid MaximumRowsOrColumns="4" Orientation="Horizontal" HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <Setter Property="Margin" Value="32,16,32,16"/>
+                </Style>
+            </GridView.ItemContainerStyle>
+        </GridView>
     </StackPanel>
 </Page>

@@ -125,9 +125,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChooseLogoDialog.xaml.cs">
+      <DependentUpon>ChooseLogoDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseSvg.xaml.cs">
+      <DependentUpon>ChooseSvg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataClass\ObserverbleOtp.cs" />
     <Compile Include="DataClass\OtpItem.cs" />
+    <Compile Include="DataClass\SvgItem.cs" />
     <Compile Include="Functions\SqlAccess.cs" />
     <Compile Include="Functions\SteamCode.cs" />
+    <Compile Include="Functions\TotpCode.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -153,9 +162,7 @@
     <Content Include="Assets\Logos\angellist.svg" />
     <Content Include="Assets\Logos\animebytes.svg" />
     <Content Include="Assets\Logos\anonaddy.svg" />
-    <Content Include="Assets\Logos\apache.svg" />
     <Content Include="Assets\Logos\apple.svg" />
-    <Content Include="Assets\Logos\appveyor.svg" />
     <Content Include="Assets\Logos\arenanet.svg" />
     <Content Include="Assets\Logos\atlantic_net.svg" />
     <Content Include="Assets\Logos\atlassian.svg" />
@@ -217,10 +224,8 @@
     <Content Include="Assets\Logos\figma.svg" />
     <Content Include="Assets\Logos\fingerprint.svg" />
     <Content Include="Assets\Logos\finnair.svg" />
-    <Content Include="Assets\Logos\firefox.svg" />
     <Content Include="Assets\Logos\flight_takeoff.svg" />
     <Content Include="Assets\Logos\floatplane.svg" />
-    <Content Include="Assets\Logos\friendica.svg" />
     <Content Include="Assets\Logos\fritz.svg" />
     <Content Include="Assets\Logos\gamepad.svg" />
     <Content Include="Assets\Logos\gandi.svg" />
@@ -236,11 +241,9 @@
     <Content Include="Assets\Logos\greenhost.svg" />
     <Content Include="Assets\Logos\hackerone.svg" />
     <Content Include="Assets\Logos\heroku.svg" />
-    <Content Include="Assets\Logos\hetzner.svg" />
     <Content Include="Assets\Logos\hitbtc.svg" />
     <Content Include="Assets\Logos\hmrc.svg" />
     <Content Include="Assets\Logos\home_assistant.svg" />
-    <Content Include="Assets\Logos\hover.svg" />
     <Content Include="Assets\Logos\humblebundle.svg" />
     <Content Include="Assets\Logos\hurricane_electric.svg" />
     <Content Include="Assets\Logos\ibm.svg" />
@@ -308,7 +311,6 @@
     <Content Include="Assets\Logos\patreon.svg" />
     <Content Include="Assets\Logos\paypal.svg" />
     <Content Include="Assets\Logos\paysafecard.svg" />
-    <Content Include="Assets\Logos\paywithprivacy.svg" />
     <Content Include="Assets\Logos\pcloud.svg" />
     <Content Include="Assets\Logos\phabricator.svg" />
     <Content Include="Assets\Logos\phpmyadmin.svg" />
@@ -328,10 +330,8 @@
     <Content Include="Assets\Logos\robinhood.svg" />
     <Content Include="Assets\Logos\rockstar.svg" />
     <Content Include="Assets\Logos\rss.svg" />
-    <Content Include="Assets\Logos\sap.svg" />
     <Content Include="Assets\Logos\scaleway.svg" />
     <Content Include="Assets\Logos\school.svg" />
-    <Content Include="Assets\Logos\sciebo.svg" />
     <Content Include="Assets\Logos\sentry.svg" />
     <Content Include="Assets\Logos\sevdesk.svg" />
     <Content Include="Assets\Logos\skrill.svg" />
@@ -372,7 +372,6 @@
     <Content Include="Assets\Logos\wallet.svg" />
     <Content Include="Assets\Logos\wargaming.svg" />
     <Content Include="Assets\Logos\wasabi.svg" />
-    <Content Include="Assets\Logos\web_de.svg" />
     <Content Include="Assets\Logos\weclapp.svg" />
     <Content Include="Assets\Logos\wikimedia.svg" />
     <Content Include="Assets\Logos\wordpress.svg" />
@@ -407,6 +406,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChooseLogoDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChooseSvg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -419,15 +426,15 @@
     <PackageReference Include="Otp.NET">
       <Version>1.2.2</Version>
     </PackageReference>
-    <PackageReference Include="sqlite-net-pcl">
-      <Version>1.7.335</Version>
-    </PackageReference>
     <PackageReference Include="sqlite-net-sqlcipher">
       <Version>1.7.335</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <PRIResource Include="Strings\en-US\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\zh-CN\Resources.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

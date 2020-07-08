@@ -13,5 +13,9 @@ namespace OTP_UWP.DataClass
 		public int Algorithm { get; set; } //0 SHA1,1 SHA256,2 SHA512, default: 0
 		public int Digits { get; set; } //4-10, default: 6
 		public int Period { get; set; } //default: 30
+		public int LogoType { get; set; } // 0：empty, 1: svg from andOTP,2: emoji text
+		public string Logo { get; set; } //xxx(.svg) or 😂
+		public int Priority { get; set; } //TODO
+		public int Group { get; set; } //TODO
 	}
 }

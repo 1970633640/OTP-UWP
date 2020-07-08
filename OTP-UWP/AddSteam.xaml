@@ -20,20 +20,26 @@
             <AppBarButton Icon="Accept" x:Uid="Done" Name="Done" Click="Done_Click"/>
             <AppBarButton Icon="Cancel" x:Uid="Cancel" Name="Cancel" Click="Cancel_Click"/>
         </CommandBar>
-        <ScrollViewer Grid.Row="1" Padding="24,24,24,24" HorizontalAlignment="Center">
-            <StackPanel HorizontalAlignment="Left">
+        <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch">
+            <StackPanel HorizontalAlignment="Center" Margin="24,24,24,24">
                 <TextBlock x:Uid="Add_Steam2" Style="{ThemeResource SubheaderTextBlockStyle}"  Margin="8,8,8,8"/>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
-                        <ColumnDefinition MinWidth="300"/>
+                        <ColumnDefinition MinWidth="100" Width="300"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock x:Uid="steam_secret" Grid.Row="2"  Width="auto" Grid.Column="0" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="8,8,8,8"/>
-                    <TextBox x:Name="otp_secret" Grid.Row="2" Grid.Column="1" Margin="8,8,8,8"/>
+                    <TextBlock x:Uid="otp_label" Grid.Row="0"  Width="auto" Grid.Column="0" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="8,8,8,8"/>
+                    <TextBox x:Name="otp_label" Grid.Row="0" Grid.Column="1" Margin="8,8,8,8"/>
+                    <TextBlock x:Uid="steam_secret" Grid.Row="1"  Width="auto" Grid.Column="0" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="8,8,8,8"/>
+                    <TextBox x:Name="otp_secret" Grid.Row="1" Grid.Column="1" Margin="8,8,8,8"/>
                 </Grid>
+                <TextBlock Foreground="OrangeRed" Name="err_text" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="8,8,8,8" />
+                <HyperlinkButton x:Uid="steam_learn_more" FontSize="18" Margin="8,8,8,8" />
+                <Button Style="{ThemeResource AccentButtonStyle}" x:Uid="save" FontSize="18" HorizontalAlignment="Center" Margin="0,32,0,16" Width="150" Click="Done_Click"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>
