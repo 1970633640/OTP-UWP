@@ -132,6 +132,9 @@
   <data name="advanced_setting.Text" xml:space="preserve">
     <value>Advanced Settings</value>
   </data>
+  <data name="Backup.Text" xml:space="preserve">
+    <value>Data Backup</value>
+  </data>
   <data name="Cancel.Label" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -144,8 +147,14 @@
   <data name="common_setting.Text" xml:space="preserve">
     <value>Common Settings</value>
   </data>
+  <data name="copy.Text" xml:space="preserve">
+    <value>Copy Code</value>
+  </data>
   <data name="Done.Label" xml:space="preserve">
     <value>Done</value>
+  </data>
+  <data name="edit.Text" xml:space="preserve">
+    <value>Edit</value>
   </data>
   <data name="err_empty_secret" xml:space="preserve">
     <value>Secret is empty!</value>
@@ -158,6 +167,9 @@
   </data>
   <data name="err_wrong_steam_secret" xml:space="preserve">
     <value>Steam Secret is not a valid Base32 encoded string!</value>
+  </data>
+  <data name="export.Content" xml:space="preserve">
+    <value>Export</value>
   </data>
   <data name="image_change.Content" xml:space="preserve">
     <value>Change Logo...</value>
@@ -212,6 +224,18 @@
   </data>
   <data name="Setting.Label" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="Settings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="settings_copy.Text" xml:space="preserve">
+    <value>Copy OTP Code When Clicked</value>
+  </data>
+  <data name="settings_export_clipboard.Text" xml:space="preserve">
+    <value>Export data to clipboard (JSON string)</value>
+  </data>
+  <data name="settings_import_clipboard.Text" xml:space="preserve">
+    <value>Import data from clipboard (Coming soon)</value>
   </data>
   <data name="steam_learn_more.Content" xml:space="preserve">
     <value>How to get steam secret?</value>

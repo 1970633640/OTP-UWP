@@ -1,6 +1,7 @@
 ﻿using OTP_UWP.Functions;
 using OtpNet;
 using System.Diagnostics;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -18,6 +19,7 @@ namespace OTP_UWP
             this.InitializeComponent();
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Disabled;
             Debug.WriteLine("add steam start!");
+            SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
         }
         
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -27,10 +29,21 @@ namespace OTP_UWP
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.BackStack.Remove(Frame.BackStack[Frame.BackStack.Count - 1]);
-            this.Frame.GoBack();
+            back();
         }
-
+        private void BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            e.Handled = true;
+            back();
+        }
+        private void back()
+        {
+            if (Frame.CanGoBack)
+            {
+                this.Frame.BackStack.Remove(Frame.BackStack[Frame.BackStack.Count - 1]);
+                this.Frame.GoBack();
+            }
+        }
         private async void Done_Click(object sender, RoutedEventArgs e)
         {
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
@@ -43,8 +56,9 @@ namespace OTP_UWP
                 try
                 {
                     Base32Encoding.ToBytes(otp_secret.Text);
-                    await SqlAccess.Add_Item(1, "Steam", "Steam", otp_secret.Text, 0, 5, 30,1,"steam");
-                    Back_Click(sender, e);
+                    await SqlAccess.Add_Item(1, "Steam",otp_label.Text, otp_secret.Text, 0, 5, 30,1,"steam");
+                    MainPage.mainPage.init_data();
+                    back();
                 }
                 catch
                 {

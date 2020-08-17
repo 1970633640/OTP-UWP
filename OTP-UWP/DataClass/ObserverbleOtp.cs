@@ -39,6 +39,10 @@ namespace OTP_UWP.DataClass
 
         public string secret;
 
+        public int id;
+
+        public int Height = 120; //hack
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged(string propertyName)

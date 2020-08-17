@@ -2,6 +2,7 @@
 using OtpNet;
 using System;
 using Windows.Storage;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
@@ -22,6 +23,7 @@ namespace OTP_UWP
         {
             this.InitializeComponent();
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Disabled;
+            SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
             otp_period.SelectedIndex = 1;
             otp_digits.SelectedIndex = 2;
             otp_algorithm.SelectedIndex = 0;
@@ -32,10 +34,20 @@ namespace OTP_UWP
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.GoBack();
-
+            back();
         }
-
+        private void BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            e.Handled = true;
+            back();
+        }
+        private void back()
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
+        }
         private void Add_Steam_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AddSteam));
@@ -96,6 +108,8 @@ namespace OTP_UWP
                 {
                     Base32Encoding.ToBytes(otp_secret.Text.Trim());
                     await SqlAccess.Add_Item(0, otp_issuer.Text, otp_label.Text, otp_secret.Text, otp_algorithm.SelectedIndex, (int)otp_digits.SelectedValue, (int)otp_period.SelectedValue, type, logo);
+                    MainPage.mainPage.init_data();
+                    back();
                 }
                 catch
                 {

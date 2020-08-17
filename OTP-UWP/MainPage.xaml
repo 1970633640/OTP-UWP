@@ -8,8 +8,9 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
-        <DataTemplate x:Key="OtpTemplate" x:DataType="dataclass:ObserverbleOtp">
-            <Grid Width="600" Height="120">
+        <DataTemplate x:Key="OtpTemplate" x:DataType="dataclass:ObserverbleOtp" >
+            <Grid Width="600" Height="{x:Bind Height}">
+
                 <Grid.RowDefinitions>
                     <RowDefinition  Height="60"/>
                     <RowDefinition  Height="50"/>
@@ -28,8 +29,12 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
-    <StackPanel>
-        <CommandBar Background="Transparent" DefaultLabelPosition="Right">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <CommandBar Background="Transparent" DefaultLabelPosition="Right" Grid.Row="0">
             <AppBarButton Icon="Add" x:Uid="Add" Name="Add" Click="Add_Click"/>
             <AppBarButton Icon="Setting" x:Uid="Setting" Name="setting" Click="setting_Click"/>
             <AppBarButton x:Uid="About">
@@ -37,20 +42,29 @@
                     <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE9CE;"/>
                 </AppBarButton.Icon>
             </AppBarButton>
-
         </CommandBar>
-        <TextBlock x:Name="logos" Text=""/>
-        <GridView ItemsSource="{x:Bind otpItems}" ItemTemplate="{StaticResource OtpTemplate}"  Name="OtpGrid" IsItemClickEnabled="True" SelectionMode="None" HorizontalAlignment="Stretch">
+
+        <GridView ItemsSource="{x:Bind otpItems}" ItemTemplate="{StaticResource OtpTemplate}"  Name="OtpGrid" IsItemClickEnabled="True" 
+                  SelectionMode="Single" Grid.Row="1" ItemClick="OtpGrid_ItemClick" RightTapped="OtpGrid_RightTapped">
             <GridView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <ItemsWrapGrid MaximumRowsOrColumns="4" Orientation="Horizontal" HorizontalAlignment="Center"/>
                 </ItemsPanelTemplate>
             </GridView.ItemsPanel>
+            <GridView.Resources>
+            <MenuFlyout x:Name="MenuFlyout">
+                <MenuFlyout.Items>
+                    <MenuFlyoutItem x:Name="copy" x:Uid="copy" Click="copy_Click"/>
+                    <MenuFlyoutItem x:Name="edit" x:Uid="edit" />
+                </MenuFlyout.Items>
+            </MenuFlyout>
+            </GridView.Resources>
             <GridView.ItemContainerStyle>
                 <Style TargetType="GridViewItem">
                     <Setter Property="Margin" Value="32,16,32,16"/>
                 </Style>
             </GridView.ItemContainerStyle>
         </GridView>
-    </StackPanel>
+
+    </Grid>
 </Page>

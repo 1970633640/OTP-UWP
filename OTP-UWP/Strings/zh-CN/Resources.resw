@@ -213,6 +213,12 @@
   <data name="Setting.Label" xml:space="preserve">
     <value>设置</value>
   </data>
+  <data name="Settings.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="settings_copy.Text" xml:space="preserve">
+    <value>单击复制 OTP 代码</value>
+  </data>
   <data name="steam_learn_more.Content" xml:space="preserve">
     <value>了解获取 Steam 密钥的方式</value>
   </data>
