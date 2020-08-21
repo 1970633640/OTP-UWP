@@ -21,8 +21,8 @@
             <AppBarButton Icon="Cancel" x:Uid="Cancel" Name="Cancel" Click="Cancel_Click"/>
         </CommandBar>
         <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch">
-            <StackPanel HorizontalAlignment="Center" Margin="24,24,24,24">
-                <TextBlock x:Uid="Add_Steam2" Style="{ThemeResource SubheaderTextBlockStyle}"  Margin="8,8,8,8"/>
+            <StackPanel HorizontalAlignment="Center" Margin="24,0,24,24">
+                <TextBlock x:Uid="Add_Steam2" Style="{ThemeResource HeaderTextBlockStyle}"  Margin="8,8,8,8"/>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>

@@ -17,6 +17,7 @@ namespace OTP_UWP
         {
             this.InitializeComponent();
             choose_svg.Navigate(typeof(ChooseSvg));
+            choose_emoji.Navigate(typeof(ChooseEmoji));
             chooseLogo = this;
 
             ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
@@ -26,6 +27,7 @@ namespace OTP_UWP
             }
             logo = localSettings.Values["logo"] as string;
             current.Text = "type:" + type + " value:" + logo;
+            pivot.SelectedIndex = type;
         }
 
         public void RefreshStatus(int t,string l)

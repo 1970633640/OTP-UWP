@@ -101,6 +101,7 @@ namespace OTP_UWP
             if (otp_secret.Text == "")
             {
                 err_text.Text = resourceLoader.GetString("err_empty_secret");
+                scroll1.ChangeView(0, 0, 1);
             }
             else
             {
@@ -114,8 +115,16 @@ namespace OTP_UWP
                 catch
                 {
                     err_text.Text = resourceLoader.GetString("err_wrong_secret");
+                    scroll1.ChangeView(0, 0, 1);
                 }
             }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            localSettings.Values["type"] = 0;
+            localSettings.Values["logo"] = "";
         }
     }
 }

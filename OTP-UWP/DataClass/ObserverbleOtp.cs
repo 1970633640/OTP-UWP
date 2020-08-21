@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
 
 namespace OTP_UWP.DataClass
 {
@@ -34,6 +35,10 @@ namespace OTP_UWP.DataClass
         public string logo;
 
         public string issuer;
+
+        public float emojiVisibility;
+
+        public float iconVIsibility;
 
         public string name;
 

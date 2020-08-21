@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="OTP_UWP.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OTP_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <CommandBar Background="Transparent" DefaultLabelPosition="Right" Grid.Row="0">
+            <CommandBar.Content>
+                <Button Style="{StaticResource NavigationBackButtonNormalStyle}" Grid.Row="0" Name="Back" Click="Back_Click" IsEnabled="True"/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Cancel" x:Uid="Close" Name="Cancel" Click="Back_Click"/>
+        </CommandBar>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Margin="128,32,32,32">
+                <TextBlock x:Uid="About_OTP_UWP" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,8,0,8"/>
+                <TextBlock Text="OTP UWP 1.0"/>
+                <TextBlock x:Name="quota" Margin="0,8,0,8"/>
+                <HyperlinkButton x:Uid="Official_website"/>
+                <HyperlinkButton x:Uid="Privacy_policy"/>
+                <HyperlinkButton x:Uid="Opensource"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

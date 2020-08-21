@@ -18,6 +18,7 @@
             <CommandBar.Content>
                 <Button Style="{StaticResource NavigationBackButtonNormalStyle}" Grid.Row="0" Name="Back" Click="Back_Click" IsEnabled="True"/>
             </CommandBar.Content>
+            <AppBarButton Icon="Cancel" x:Uid="Close" Name="Cancel" Click="Back_Click"/>
         </CommandBar>
         <ScrollViewer HorizontalAlignment="Stretch" Grid.Row="1">
             <StackPanel HorizontalAlignment="Center">
@@ -31,7 +32,7 @@
                         <ColumnDefinition MinWidth="100" Width="200"/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" Margin="8,8,8,8" Style="{ThemeResource SubtitleTextBlockStyle}" x:Uid="settings_copy" VerticalAlignment="Center"/>
-                    <ToggleSwitch Name="toggle1" IsOn="True" Margin="8,8,8,8" Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center" Toggled="ToggleSwitch_Toggled"/>
+                    <ToggleSwitch Name="toggle1" IsOn="True" Margin="8,8,8,8" Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center" Toggled="ToggleSwitch_Toggled" />
                 </Grid>
                 <TextBlock Style="{ThemeResource HeaderTextBlockStyle}" x:Uid="Backup" Margin="8,8,8,8"/>
                 <Grid>

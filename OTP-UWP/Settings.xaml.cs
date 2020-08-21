@@ -16,18 +16,22 @@ namespace OTP_UWP
     /// </summary>
     public sealed partial class Settings : Page
     {
+        private bool loaded = false;
         public Settings()
         {
             this.InitializeComponent();
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
             SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
 
+            
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             back();
         }
+
+        
         private void BackRequested(object sender, BackRequestedEventArgs e)
         {
             e.Handled = true;
@@ -54,17 +58,26 @@ namespace OTP_UWP
 
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
-            ApplicationDataContainer roamingSettings = Windows.Storage.ApplicationData.Current.RoamingSettings;
-            roamingSettings.Values["CLICK_COPY"] = toggle1.IsOn;
+            if (loaded)
+            {
+                Debug.WriteLine("toggled!" + toggle1.IsOn);
+                ApplicationDataContainer roamingSettings = ApplicationData.Current.RoamingSettings;
+                roamingSettings.Values["CLICK_COPY"] = toggle1.IsOn;
+            }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ApplicationDataContainer roamingSettings = Windows.Storage.ApplicationData.Current.RoamingSettings;
+            Debug.WriteLine("Loaded!");
+            ApplicationDataContainer roamingSettings = ApplicationData.Current.RoamingSettings;
             if (roamingSettings.Values.ContainsKey("CLICK_COPY"))
+            {
+                Debug.WriteLine("CLICK_COPY available  " + roamingSettings.Values["CLICK_COPY"]);
                 toggle1.IsOn = (bool)roamingSettings.Values["CLICK_COPY"];
+            }
             else
-                toggle1.IsOn = true; 
+                toggle1.IsOn = true;
+            loaded = true;
         }
     }
 }

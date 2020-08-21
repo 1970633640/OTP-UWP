@@ -12,6 +12,7 @@ using System.Diagnostics;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.UI.Xaml.Media;
 using Windows.Storage;
+using Windows.UI.Xaml.Navigation;
 
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
 
@@ -28,10 +29,11 @@ namespace OTP_UWP
         public MainPage()
         {
             this.InitializeComponent();
-            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Required;
             mainPage = this;
             init_data();
-            DispatcherTimerSetup();
+            Debug.WriteLine("Mainpage Start!");
+            //DispatcherTimerSetup();
         }
 
         public void DispatcherTimerSetup()
@@ -40,11 +42,13 @@ namespace OTP_UWP
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
             dispatcherTimer.Start();
+            Debug.WriteLine("MainPage Timer start!");
         }
 
         void dispatcherTimer_Tick(object sender, object e)
         {
             GenerateCodes();
+            Debug.WriteLine("TICK!");
         }
 
         public async void init_data()
@@ -58,7 +62,9 @@ namespace OTP_UWP
                     name = item.Name,
                     Code = "000000",
                     issuer = item.Issuer,
-                    logo = "ms-appx:///Assets/Logos/" + item.Logo + ".svg",
+                    logo =item.LogoType==1? "ms-appx:///Assets/Logos/" + item.Logo + ".svg":item.Logo+"\0",
+                    emojiVisibility=item.LogoType == 2?1.0f:0.0f,
+                    iconVIsibility=item.LogoType==1?1.0f:0.0f ,
                     algorithm = item.Algorithm,
                     period = item.Period,
                     digits = item.Digits,
@@ -69,7 +75,18 @@ namespace OTP_UWP
             }
             GenerateCodes();
         }
-
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            DispatcherTimerSetup();
+            GenerateCodes();
+        }
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            dispatcherTimer.Tick -= dispatcherTimer_Tick;
+            dispatcherTimer.Stop();
+        }
         private void GenerateCodes()
         {
             foreach (var item in otpItems)
@@ -102,6 +119,7 @@ namespace OTP_UWP
 
         private void OtpGrid_ItemClick(object sender, ItemClickEventArgs e)
         {
+            //OtpGrid.Scale=System.Numerics.Vector3(1,1,1) ;
             Debug.WriteLine(((ObserverbleOtp)e.ClickedItem).id.ToString());
             ApplicationDataContainer roamingSettings = Windows.Storage.ApplicationData.Current.RoamingSettings;
             bool copy = true;
@@ -169,6 +187,16 @@ namespace OTP_UWP
             dataPackage.RequestedOperation = DataPackageOperation.Copy;
             dataPackage.SetText(clicked_item.Code);
             Clipboard.SetContent(dataPackage);
+        }
+
+        private void edit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Edit),clicked_item.id);
+        }
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(About));
         }
     }
 }

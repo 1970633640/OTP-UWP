@@ -120,8 +120,14 @@
   <data name="About.Label" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="About_OTP_UWP.Text" xml:space="preserve">
+    <value>About OTP UWP</value>
+  </data>
   <data name="Add.Label" xml:space="preserve">
     <value>Add</value>
+  </data>
+  <data name="Add_authenticator.Text" xml:space="preserve">
+    <value>Add a New Authenticator</value>
   </data>
   <data name="Add_Steam.Label" xml:space="preserve">
     <value>Add a Steam Authenticator</value>
@@ -144,17 +150,32 @@
   <data name="choose_none.Content" xml:space="preserve">
     <value>Display nothing as logo</value>
   </data>
+  <data name="Close.Label" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="common_setting.Text" xml:space="preserve">
     <value>Common Settings</value>
   </data>
   <data name="copy.Text" xml:space="preserve">
     <value>Copy Code</value>
   </data>
+  <data name="Delete.Label" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete2" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delete_permanently" xml:space="preserve">
+    <value>Delete this authenticator permanently?</value>
+  </data>
   <data name="Done.Label" xml:space="preserve">
     <value>Done</value>
   </data>
   <data name="edit.Text" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="Edit_authenticator.Text" xml:space="preserve">
+    <value>Edit an Authenticator</value>
   </data>
   <data name="err_empty_secret" xml:space="preserve">
     <value>Secret is empty!</value>
@@ -195,8 +216,14 @@
   <data name="logo_svg.Header" xml:space="preserve">
     <value>Built-in Logo</value>
   </data>
+  <data name="Official_website.Content" xml:space="preserve">
+    <value>Official Website</value>
+  </data>
   <data name="ok" xml:space="preserve">
     <value>OK</value>
+  </data>
+  <data name="Opensource.Content" xml:space="preserve">
+    <value>Open Source</value>
   </data>
   <data name="otp_algorithm.Text" xml:space="preserve">
     <value>Algorithm</value>
@@ -218,6 +245,9 @@
   </data>
   <data name="otp_type.Text" xml:space="preserve">
     <value>OTP Type</value>
+  </data>
+  <data name="Privacy_policy.Content" xml:space="preserve">
+    <value>Privacy Policy</value>
   </data>
   <data name="save.Content" xml:space="preserve">
     <value>Save</value>

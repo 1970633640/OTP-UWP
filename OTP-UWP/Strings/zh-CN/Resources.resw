@@ -120,8 +120,14 @@
   <data name="About.Label" xml:space="preserve">
     <value>关于</value>
   </data>
+  <data name="About_OTP_UWP.Text" xml:space="preserve">
+    <value>关于 OTP UWP</value>
+  </data>
   <data name="Add.Label" xml:space="preserve">
     <value>添加</value>
+  </data>
+  <data name="Add_authenticator.Text" xml:space="preserve">
+    <value>添加一个新的验证器</value>
   </data>
   <data name="Add_Steam.Label" xml:space="preserve">
     <value>添加 Steam 令牌</value>
@@ -132,6 +138,9 @@
   <data name="advanced_setting.Text" xml:space="preserve">
     <value>高级设置</value>
   </data>
+  <data name="Backup.Text" xml:space="preserve">
+    <value>数据备份</value>
+  </data>
   <data name="Cancel.Label" xml:space="preserve">
     <value>取消</value>
   </data>
@@ -141,11 +150,32 @@
   <data name="choose_none.Content" xml:space="preserve">
     <value>不显示图标</value>
   </data>
+  <data name="Close.Label" xml:space="preserve">
+    <value>关闭</value>
+  </data>
   <data name="common_setting.Text" xml:space="preserve">
     <value>常规设置</value>
   </data>
+  <data name="copy.Text" xml:space="preserve">
+    <value>复制代码</value>
+  </data>
+  <data name="Delete.Label" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Delete2" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Delete_permanently" xml:space="preserve">
+    <value>确实要永久删除这个验证器吗?</value>
+  </data>
   <data name="Done.Label" xml:space="preserve">
     <value>完成</value>
+  </data>
+  <data name="edit.Text" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Edit_authenticator.Text" xml:space="preserve">
+    <value>编辑验证器</value>
   </data>
   <data name="err_empty_secret" xml:space="preserve">
     <value>未输入密钥！</value>
@@ -158,6 +188,9 @@
   </data>
   <data name="err_wrong_steam_secret" xml:space="preserve">
     <value>Steam 密钥不符合 Base32 编码格式!</value>
+  </data>
+  <data name="export.Content" xml:space="preserve">
+    <value>导出</value>
   </data>
   <data name="image_change.Content" xml:space="preserve">
     <value>更换图标...</value>
@@ -183,8 +216,14 @@
   <data name="logo_svg.Header" xml:space="preserve">
     <value>内置图标</value>
   </data>
+  <data name="Official_website.Content" xml:space="preserve">
+    <value>官方网站</value>
+  </data>
   <data name="ok" xml:space="preserve">
     <value>确定</value>
+  </data>
+  <data name="Opensource.Content" xml:space="preserve">
+    <value>开源相关</value>
   </data>
   <data name="otp_algorithm.Text" xml:space="preserve">
     <value>算法</value>
@@ -207,6 +246,9 @@
   <data name="otp_type.Text" xml:space="preserve">
     <value>OTP 类型</value>
   </data>
+  <data name="Privacy_policy.Content" xml:space="preserve">
+    <value>隐私政策</value>
+  </data>
   <data name="save.Content" xml:space="preserve">
     <value>保存</value>
   </data>
@@ -218,6 +260,12 @@
   </data>
   <data name="settings_copy.Text" xml:space="preserve">
     <value>单击复制 OTP 代码</value>
+  </data>
+  <data name="settings_export_clipboard.Text" xml:space="preserve">
+    <value>数据导出到剪贴板 (JSON 字符串)</value>
+  </data>
+  <data name="settings_import_clipboard.Text" xml:space="preserve">
+    <value>从剪贴板导入 (即将推出)</value>
   </data>
   <data name="steam_learn_more.Content" xml:space="preserve">
     <value>了解获取 Steam 密钥的方式</value>
