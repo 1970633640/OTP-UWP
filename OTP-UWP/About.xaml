@@ -25,9 +25,9 @@
                 <TextBlock x:Uid="About_OTP_UWP" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,8,0,8"/>
                 <TextBlock Text="OTP UWP 1.0"/>
                 <TextBlock x:Name="quota" Margin="0,8,0,8"/>
-                <HyperlinkButton x:Uid="Official_website"/>
-                <HyperlinkButton x:Uid="Privacy_policy"/>
-                <HyperlinkButton x:Uid="Opensource"/>
+                <HyperlinkButton x:Uid="Official_website" NavigateUri="https://github.com/1970633640/OTP-UWP"/>
+                <HyperlinkButton x:Uid="Privacy_policy" NavigateUri="https://github.com/1970633640/OTP-UWP/blob/master/Privacy.md"/>
+                <HyperlinkButton x:Uid="Opensource" NavigateUri="https://github.com/1970633640/OTP-UWP/blob/master/OpenSource.md"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

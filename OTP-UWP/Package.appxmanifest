@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="OTPUWP"
-    Publisher="CN=w"
+    Name="58499ExcitedSofts.OTPUWP"
+    Publisher="CN=16B4EE42-6BE2-48B1-9EA8-DFF385491EAD"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="04aa4d5c-a733-4ad0-bbde-28a54392bc44" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="cc74e2b2-a873-493e-a3c6-07072e9cb151" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>OTP-UWP</DisplayName>
-    <PublisherDisplayName>w</PublisherDisplayName>
+    <DisplayName>OTP UWP</DisplayName>
+    <PublisherDisplayName>Excited Softs</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
