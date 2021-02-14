@@ -1,5 +1,5 @@
 # Steam Authenticator Secret (Use at your own risk!)
-If you have a rooted android phone, you can simply browse to the files you need using Root Explorer and copy the Base56 encoded string.
+If you have a rooted android phone, you can simply browse to the files you need using Root Explorer and copy the Base32 encoded string.
 
 The file you will need is:
 
