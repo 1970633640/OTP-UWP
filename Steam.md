@@ -1,8 +1,11 @@
 # Steam Authenticator Secret
 
-You can visit the following URL for more data.
+You can visit the following URL for tutorial to get Base32 encoded string.
 
 https://github.com/SteamTimeIdler/stidler/wiki/Getting-your-%27shared_secret%27-code-for-use-with-Auto-Restarter-on-Mobile-Authentication
+
+
+
 
 **Warning**
 
