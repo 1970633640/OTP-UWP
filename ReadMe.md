@@ -1,5 +1,5 @@
 # OTP UWP
-an UWP Platform OTP Authenticator
+a UWP Platform OTP Authenticator
 
 ## Features
 - TOTP authenticator
