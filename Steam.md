@@ -1,11 +1,5 @@
-# Steam Authenticator Secret (Use at your own risk!)
-If you have a rooted android phone, you can simply browse to the files you need using Root Explorer and copy the Base32 encoded string.
+# Steam Authenticator Secret
 
-The file you will need is:
-
-/data/data/com.valvesoftware.android.steam.community/f/Steamguard-STEAMID64
-
-# More...
 You can visit the following URL for more data.
 
 https://github.com/SteamTimeIdler/stidler/wiki/Getting-your-%27shared_secret%27-code-for-use-with-Auto-Restarter-on-Mobile-Authentication
