@@ -1,11 +1,20 @@
 # Steam Authenticator Secret
 
-You can visit the following third-part URL for tutorial to get Base32 encoded string.
+You can use the following third party application to get the Steam Base32 Authentication String.
 
-https://github.com/SteamTimeIdler/stidler/wiki/Getting-your-%27shared_secret%27-code-for-use-with-Auto-Restarter-on-Mobile-Authentication
+https://github.com/Jessecar96/SteamDesktopAuthenticator
+
+Once installed and setup, to get the shared_secret, open your SteamDesktopAuth folder and open 'maFiles'
+
+Open the file with your steamID in Notepad and your Base32 code will be inside.
 
 <br/><br/><br/><br/>
 
+### More
+
+You can visit the following third-part URL for tutorial to get Base32 encoded string.
+
+https://github.com/SteamTimeIdler/stidler/wiki/Getting-your-%27shared_secret%27-code-for-use-with-Auto-Restarter-on-Mobile-Authentication
 
 **Warning**
 
