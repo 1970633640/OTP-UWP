@@ -12,7 +12,7 @@ Open the file with your steamID in Notepad and your Base32 code will be inside.
 
 ### More
 
-You can visit the following third-part URL for tutorial to get Base32 encoded string.
+You can visit the following third-part URL for more tutorial to get Base32 encoded string.
 
 https://github.com/SteamTimeIdler/stidler/wiki/Getting-your-%27shared_secret%27-code-for-use-with-Auto-Restarter-on-Mobile-Authentication
 
